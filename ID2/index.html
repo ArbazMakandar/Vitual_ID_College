@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual College ID Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: rgb(215, 233, 250);">
+    <div id="form-page" class="container">
+        <h2>College ID Card Generator</h2>
+        
+        <div class="form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="roll">Roll Number:</label>
+            <input type="text" id="roll" placeholder="Enter roll number" required>
+
+            <label for="college">College Name:</label>
+            <input type="text" id="college" placeholder="Enter college name" required>
+
+            <label for="department">Department:</label>
+            <input type="text" id="department" placeholder="Enter department" required>
+
+            <label for="year">Year:</label>
+            <input type="text" id="year" placeholder="Enter year" required>
+
+            <label for="qr-text">Enter QR Code Data:</label>
+            <textarea id="qr-text" placeholder="Enter text to show in QR Code" required></textarea>
+
+            <label for="color">Select ID Background Color:</label>
+            <input type="color" id="color">
+
+            <label for="college-logo">Upload College Logo:</label>
+            <input type="file" id="college-logo" accept="image/*">
+
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo" accept="image/*">
+
+            <button onclick="generateID()">Generate ID</button>
+        </div>
+    </div>
+
+    <!-- ID Card Page (Initially Hidden) -->
+    <div id="id-card-page" class="container hidden">
+        <div id="id-card">
+            <div class="id-header">
+                <img id="id-logo" src="" alt="College Logo">
+                <h3 id="id-college">College Name</h3>
+            </div>
+            <div class="id-body">
+                <div class="left-section">
+                    <h3 id="id-name">Your Name</h3>
+                    <p><b>Roll No:</b> <span id="id-roll">Roll Number</span></p>
+                    <p><b>Department:</b> <span id="id-department">Department</span></p>
+                    <p><b>Year:</b> <span id="id-year">Year</span></p>
+                </div>
+                <div class="right-section">
+                    <img id="id-photo" src="" alt="Profile Photo">
+                    <div id="qr-code"></div> <!-- QR Code will be placed here -->
+                </div>
+            </div>
+        </div>
+        <button onclick="downloadID()">Download ID</button>
+    </div>
+
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</body>
+</html>

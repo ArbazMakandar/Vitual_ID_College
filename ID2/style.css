@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea, button {
+    padding: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 60px;
+    resize: none;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+#id-card {
+    width: 320px;
+    height: 220px;
+    margin: 20px auto;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    background: #007bff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    position: relative;
+}
+
+.id-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.id-header img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.id-body {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-section {
+    flex: 1;
+    padding: 5px;
+}
+
+.right-section {
+    width: 80px;
+    height: 120px;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-section img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+#qr-code {
+    margin-top: 5px;
+    width: 70px;
+    height: 70px;
+}
+
+/* Fix alignment issues */
+#id-year {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 3px 6px;
+    border-radius: 4px;
+}
